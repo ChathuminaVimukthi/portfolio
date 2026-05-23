@@ -13,8 +13,8 @@ export default function ProjectsPage() {
   return (
     <PageWrapper>
       <div className="py-12 sm:py-16">
-        <h1 className="text-3xl font-semibold text-primary">Projects</h1>
-        <p className="text-secondary mt-2">Real things I've built and what I learned from them.</p>
+        <h1 className="text-3xl font-semibold text-primary">Work &amp; Experiments</h1>
+        <p className="text-secondary mt-2 max-w-xl">A selection of engineering work, technical experiments, and systems I&apos;ve contributed to across enterprise, mobile, and cloud platforms.</p>
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
           {projects.map(({ meta }) => (
             <ProjectCard key={meta.slug} meta={meta} />

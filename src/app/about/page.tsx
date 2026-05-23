@@ -6,6 +6,7 @@ import { PageWrapper } from '@/components/layout/PageWrapper'
 import { NowCard } from '@/components/about/NowCard'
 import { Timeline } from '@/components/about/Timeline'
 import { TechStack } from '@/components/about/TechStack'
+import { LeadershipPhilosophy } from '@/components/about/LeadershipPhilosophy'
 import { siteConfig } from '@/lib/config'
 
 export const metadata: Metadata = {
@@ -22,7 +23,7 @@ export default function AboutPage() {
         <div className="flex flex-col sm:flex-row sm:items-start gap-6">
           <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden ring-2 ring-border shrink-0">
             <Image
-              src="/avatar.jpg"
+              src="/images/avatar.jpg"
               alt={siteConfig.name}
               fill
               className="object-cover"
@@ -52,14 +53,24 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Intro */}
-        <p className="text-secondary leading-relaxed mt-8">
-          I lead a team of 18 engineers and QAs at Verdentra, where I am responsible for delivery,
-          technical direction, and stakeholder management across client and internal sides. On top of
-          that I carry a stretch role as Account Owner, which covers everything from resourcing and
-          finances to pre-sales and proactive proposals. The technical work still matters a lot to me,
-          but the team and delivery side turned out to be a different kind of challenge than I expected.
-        </p>
+        {/* About Me */}
+        <div className="space-y-4 text-secondary leading-relaxed mt-8">
+          <p>
+            I&apos;m an Associate Tech Lead based in Sri Lanka with experience building enterprise-grade web, mobile, and cloud solutions across multiple industries including HR/payroll systems, banking platforms, compliance systems, and telecom infrastructure.
+          </p>
+          <p>
+            My background spans full-stack engineering with technologies such as React, React Native, TypeScript, .NET, Spring Boot, Azure, and Docker. Over time, my responsibilities expanded beyond engineering into team leadership, delivery ownership, stakeholder alignment, and account-level planning.
+          </p>
+          <p>
+            One of the most valuable parts of my journey has been learning how engineering decisions connect to business outcomes — balancing delivery quality, team growth, client expectations, and long-term sustainability.
+          </p>
+          <p>
+            Currently, I&apos;m focused on improving as a technology leader by strengthening communication, decision-making, delivery thinking, and business awareness while continuing to stay technically hands-on.
+          </p>
+        </div>
+
+        {/* Leadership Philosophy */}
+        <LeadershipPhilosophy />
 
         {/* Right now */}
         <NowCard />
@@ -70,7 +81,7 @@ export default function AboutPage() {
         {/* Tech stack */}
         <TechStack />
 
-        {/* Where I'm growing — kept as prose, it's the most personal part */}
+        {/* Where I'm growing */}
         <section className="mt-16 pt-16 border-t border-border">
           <h2 className="text-xl font-semibold text-primary mb-6">Where I&apos;m growing</h2>
           <div className="space-y-4 text-secondary leading-relaxed">

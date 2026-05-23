@@ -1,9 +1,10 @@
-const now = {
-  working: 'Building a second layer of leadership on my team and running the pre-sales pipeline for two new client engagements.',
-  reading: '"An Elegant Puzzle" — Will Larson',
-  thinking: 'How to get my team to raise problems early without me having to ask.',
-  updated: 'May 2026',
-}
+const focusItems = [
+  'Improving communication and leadership maturity',
+  'Learning more about delivery strategy and business operations',
+  'Exploring AI-assisted engineering workflows',
+  'Writing more consistently about engineering and leadership',
+  'Building scalable systems with modern full-stack technologies',
+]
 
 export function NowCard() {
   return (
@@ -13,23 +14,17 @@ export function NowCard() {
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
           <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
         </span>
-        <span className="text-xs font-medium text-accent uppercase tracking-wider">Right now</span>
+        <span className="text-xs font-medium text-accent uppercase tracking-wider">What I&apos;m Currently Focused On</span>
       </div>
-      <div className="space-y-3">
-        <div className="flex gap-3">
-          <span className="text-xs text-secondary w-20 shrink-0 pt-0.5">Working on</span>
-          <span className="text-sm text-primary">{now.working}</span>
-        </div>
-        <div className="flex gap-3">
-          <span className="text-xs text-secondary w-20 shrink-0 pt-0.5">Reading</span>
-          <span className="text-sm text-primary">{now.reading}</span>
-        </div>
-        <div className="flex gap-3">
-          <span className="text-xs text-secondary w-20 shrink-0 pt-0.5">Thinking</span>
-          <span className="text-sm text-primary">{now.thinking}</span>
-        </div>
-      </div>
-      <p className="text-xs text-secondary mt-4">Updated {now.updated}</p>
+      <ul className="space-y-2">
+        {focusItems.map((item) => (
+          <li key={item} className="flex items-start gap-2 text-sm text-primary">
+            <span className="text-accent mt-1 shrink-0">·</span>
+            {item}
+          </li>
+        ))}
+      </ul>
+      <p className="text-xs text-secondary mt-4">Updated May 2026</p>
     </div>
   )
 }
