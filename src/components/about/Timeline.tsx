@@ -4,32 +4,39 @@ import { motion } from 'framer-motion'
 
 const milestones = [
   {
-    period: '2019',
-    title: 'Backend Developer',
+    period: '2018',
+    title: 'Trainee Software Engineer, hSenid Mobile',
     description:
-      'Started as a backend developer working with .NET and Azure. Learned how systems fit together, built APIs, data pipelines, and cloud infrastructure from the ground up.',
-    tags: ['.NET', 'Azure', 'SQL Server'],
+      'Started as a trainee building the TAP Insights dashboard — a data visualisation tool for a Telco Application Platform tracking revenue, traffic, subscriptions, and trending applications. First exposure to React and production frontend development.',
+    tags: ['React', 'JavaScript', 'Redux'],
   },
   {
-    period: '2021',
-    title: 'Senior Engineer',
+    period: '2020',
+    title: 'Software Engineer, hSenid Mobile',
     description:
-      'Took on more technical ownership: leading design decisions, reviewing architecture, and mentoring junior engineers alongside delivery work.',
-    tags: ['.NET', 'Azure DevOps', 'PostgreSQL'],
+      'Rejoined hSenid Mobile after completing my degree, moving into full-stack work across web and mobile platforms. Worked across two products: hView (an internal HR and data visualisation platform built with React, Spring WebFlux, GraphQL, and Keycloak) and RemitPlus (a mobile banking app for a leading bank, built with React Native and a React admin dashboard for campaign and user management).',
+    tags: ['React Native', 'React', 'Spring Boot', 'Keycloak'],
+  },
+  {
+    period: '2022',
+    title: 'Senior Engineer, hSenid Mobile',
+    description:
+      'Promoted to Senior Engineer in April 2022. Continued on the RemitPlus platform and took on SMSC/SMPP-GW — a high TPS telecom infrastructure project for mission-critical SMS delivery. Took direct ownership of the admin panel with React and Spring WebFlux and collaborated with senior architects on backend improvements.',
+    tags: ['Spring WebFlux', 'React', 'TypeScript', 'Telecom'],
   },
   {
     period: '2023',
-    title: 'First Delivery Ownership',
+    title: 'Senior Software Engineer, Verdentra',
     description:
-      'Started getting pulled into planning sessions, risk discussions, and stakeholder updates. Owned a delivery end-to-end for the first time and started mentoring three engineers directly.',
-    tags: ['Delivery', 'Stakeholders', 'Mentoring'],
+      'Joined Verdentra as a Senior Engineer on an enterprise HR/Payroll modernization engagement for a US-based Fortune 500 client. Contributed to the Dynamic UI framework delivery — a template-driven architecture replacing 50+ legacy pages — working across RBAC implementation, form validation, and delivery stabilisation under a tight deadline. Also led a team of 4 on a staff-augmented project for GitLab, enhancing GLAS (GitLab Advanced SAST) detection coverage across Java, JavaScript, and Go.',
+    tags: ['.NET', 'React', 'TypeScript', 'GitLab'],
   },
   {
-    period: '2024',
+    period: '2025',
     title: 'Associate Tech Lead, Verdentra',
     description:
-      'Leading a team of 18 engineers and QAs. Responsible for delivery velocity, technical direction, client and internal stakeholder management, and building a second layer of leadership. Also carrying a stretch role as Account Owner, which means being accountable for the account from finances and resourcing to pre-sales and strategic proposals.',
-    tags: ['Team Lead', 'Account Owner', 'Pre-Sales', 'Mentoring'],
+      'Promoted to Associate Tech Lead in May 2025. Leading a cross-functional team of 18 engineers and QAs on an enterprise HR/Payroll modernization engagement for a US-based Fortune 500 client, coordinating daily with offshore teams across time zones. Responsible for delivery, architecture, Azure infrastructure, and stakeholder alignment. Also carrying account-level responsibilities including pre-sales activities, resource planning, and building the next layer of engineering leadership.',
+    tags: ['Team Lead', 'Azure', 'Architecture', 'Delivery'],
   },
 ]
 

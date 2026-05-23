@@ -32,7 +32,7 @@ export default function AboutPage() {
           </div>
           <div>
             <h1 className="text-2xl font-semibold text-primary">{siteConfig.name}</h1>
-            <p className="text-secondary mt-1">{siteConfig.role} · Backend &amp; Cloud</p>
+            <p className="text-secondary mt-1">{siteConfig.role} · Full-Stack &amp; Cloud</p>
             <div className="flex items-center gap-4 mt-3">
               {[
                 { href: siteConfig.github, label: 'GitHub' },
@@ -86,10 +86,10 @@ export default function AboutPage() {
           <h2 className="text-xl font-semibold text-primary mb-6">Where I&apos;m growing</h2>
           <div className="space-y-4 text-secondary leading-relaxed">
             <p>
-              Right now I am working toward AZ-104 and AZ-305 certifications, which is partly about
-              the credentials and mostly about having a cleaner mental model of Azure at the
-              architecture level. I want to be more credible in design conversations, not just
-              delivery ones.
+              I completed the AZ-104 (Azure Administrator Associate) certification and am now working
+              toward AZ-305 (Azure Solutions Architect Expert). The certifications matter, but what
+              I am really after is a cleaner mental model of Azure at the architecture level — I want
+              to be more credible in design conversations, not just delivery ones.
             </p>
             <p>
               The pre-sales side is newer territory. I am running proactive proposals and working

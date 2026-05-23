@@ -17,7 +17,10 @@ export function ProjectCard({ meta }: { meta: ProjectMeta & { slug: string } }) 
         <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${className}`}>
           {label}
         </span>
-        <span className="text-sm text-secondary">{formatShortDate(meta.date)}</span>
+        <div className="flex items-center gap-1.5 text-xs text-secondary">
+          {meta.role && <><span>{meta.role}</span><span>·</span></>}
+          <span>{formatShortDate(meta.date)}</span>
+        </div>
       </div>
       <h2 className="text-lg font-semibold text-primary mt-3 group-hover:text-accent transition-colors">{meta.title}</h2>
       <p className="text-sm text-secondary mt-2 leading-relaxed">{meta.summary}</p>

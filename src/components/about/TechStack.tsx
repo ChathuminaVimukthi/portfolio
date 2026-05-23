@@ -1,19 +1,23 @@
 const stack = [
   {
-    label: 'Backend',
-    items: ['.NET 8', 'C#', 'REST APIs', 'PostgreSQL', 'SQL Server'],
-  },
-  {
-    label: 'Cloud',
-    items: ['Azure', 'Azure DevOps', 'Container Apps', 'Azure Monitor'],
-  },
-  {
     label: 'Frontend',
-    items: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS'],
+    items: ['React', 'React Native', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Redux'],
+  },
+  {
+    label: 'Backend',
+    items: ['.NET Core', 'C#', 'Java', 'Spring Boot', 'Spring WebFlux', 'GraphQL', 'Micronaut'],
+  },
+  {
+    label: 'Cloud & Infra',
+    items: ['Azure', 'Azure DevOps', 'Docker', 'Firebase FCM', 'Keycloak'],
+  },
+  {
+    label: 'Data',
+    items: ['PostgreSQL', 'SQL Server'],
   },
   {
     label: 'Practices',
-    items: ['CI/CD', 'Agile', 'System Design', 'Code Review'],
+    items: ['CI/CD', 'Agile/Scrum', 'Architecture Review', 'Code Review', 'Stakeholder Management'],
   },
 ]
 
@@ -24,7 +28,7 @@ export function TechStack() {
       <div className="space-y-5">
         {stack.map((group) => (
           <div key={group.label} className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-            <span className="text-xs text-secondary w-20 shrink-0 pt-1 font-medium uppercase tracking-wide">
+            <span className="text-xs text-secondary w-24 shrink-0 pt-1 font-medium uppercase tracking-wide">
               {group.label}
             </span>
             <div className="flex flex-wrap gap-2">

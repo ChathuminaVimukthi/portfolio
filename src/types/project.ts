@@ -7,5 +7,6 @@ export interface ProjectMeta {
   stack: string[]
   summary: string
   status: ProjectStatus
+  role?: string
   draft?: boolean
 }

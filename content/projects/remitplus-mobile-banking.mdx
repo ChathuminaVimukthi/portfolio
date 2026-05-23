@@ -1,0 +1,33 @@
+---
+title: "RemitPlus Mobile Banking Platform"
+date: "2021-06-01"
+stack: ["React Native", "React", "TypeScript", "Spring Boot", "Keycloak", "Firebase FCM", "PostgreSQL"]
+summary: "End-to-end mobile banking solution for a leading bank — iOS/Android app, admin dashboard for campaign and user management, and a Spring Boot backend with Keycloak authentication."
+status: complete
+role: "Engineer"
+draft: false
+---
+
+## Problem
+
+A leading bank needed a mobile remittance platform that went beyond basic transfers. They wanted a mobile app for customers on both iOS and Android, an admin dashboard that let product teams configure the app and run targeted marketing campaigns without requiring app redeployments, and a push notification system for real-time customer engagement — all integrated into a single backend. I worked on this as an Engineer, contributing across the mobile app, admin dashboard, and backend integration.
+
+The app launched on iOS and Android, reaching 10,000+ downloads with a 4.1 Play Store rating.
+
+## Approach
+
+The project was split into three connected layers: a React Native mobile app, a React-based admin dashboard, and a Java Spring Boot backend. The goal was to make the admin dashboard the control plane — product teams could configure features, manage campaigns, and send push notifications without touching the mobile app code. Keycloak handled authentication across both the admin panel (role-based access for different admin tiers) and the mobile app (social logins and OTP-based authentication).
+
+## Tech Stack
+
+React Native with TypeScript for the iOS/Android app. React and TypeScript for the admin dashboard. Java Spring Boot for the backend APIs. Keycloak for identity and access management. Firebase Cloud Messaging for push notification delivery. PostgreSQL for campaign configurations, user targeting rules, and notification tracking.
+
+## Key Learnings
+
+The hardest part was not the mobile development — it was the integration architecture. Getting the admin dashboard, mobile app, and backend to behave consistently across authentication flows took careful coordination. Keycloak's flexibility meant there were many ways to configure it, and choosing the wrong approach early would have been expensive to undo.
+
+Managing the full App Store and Google Play Store deployment pipeline — version management, beta distribution, production releases — added a layer of operational complexity that is easy to underestimate if you have only worked on web products before.
+
+## Tradeoffs
+
+Building the campaign targeting and notification system as a general-purpose platform (rather than hardcoding specific campaign types) added upfront complexity but paid off when the product team wanted new campaign formats. The tradeoff was a more abstract data model for campaign configurations that required careful documentation so future developers could extend it without breaking existing rules.

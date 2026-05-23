@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { PageWrapper } from './PageWrapper'
 import { ThemeToggle } from './ThemeToggle'
 import { NavLink } from './NavLink'
@@ -15,10 +14,7 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-bg/80 backdrop-blur-md border-b border-border relative">
       <PageWrapper>
-        <div className="flex items-center justify-between h-16">
-          <Link href="/" className="font-semibold text-primary">
-            Chathumina
-          </Link>
+        <div className="flex items-center justify-end h-16 gap-6">
           <div className="hidden sm:flex items-center gap-6">
             {links.map((link) => (
               <NavLink key={link.href} href={link.href} label={link.label} />

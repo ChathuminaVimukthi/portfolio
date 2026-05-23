@@ -1,0 +1,31 @@
+---
+title: "SMSC/SMPP Gateway — Telecom Infrastructure"
+date: "2022-10-01"
+stack: ["React", "TypeScript", "Redux", "Spring Boot", "Spring WebFlux", "Java"]
+summary: "A high-throughput SMSC and SMPP gateway for mission-critical SMS infrastructure, handling large transaction volumes for mobile operators with a React-based admin panel for operational management."
+status: complete
+role: "Engineer → Senior Engineer"
+draft: false
+---
+
+## Problem
+
+Mobile operators needed a reliable, high-throughput SMS infrastructure capable of handling mission-critical message delivery at scale. The system had to manage two interconnected layers: an SMSC (Short Message Service Centre) for message routing and delivery, and an SMPP gateway for protocol-level communication with operator networks. Both needed to perform under sustained high TPS load while remaining operable through an admin interface without requiring engineering intervention for routine management.
+
+## Approach
+
+I worked on this engagement across both the Engineer and Senior Engineer stages of my career, growing into more independent ownership over the course of the project. Collaborating with senior architects on the SMSC and SMPP gateway backends, I took direct ownership of the admin panel and specific backend services. The Spring WebFlux-based backend was built for non-blocking, reactive processing — essential for sustaining throughput without thread exhaustion under peak traffic. The admin panel was built with React, TypeScript, and Redux, giving operations teams visibility into system state and control over configuration without touching the backend directly.
+
+## Tech Stack
+
+Spring Boot and Spring WebFlux (Java) for the reactive backend services. React with TypeScript and Redux for the admin panel. Infrastructure designed for high TPS telecom workloads.
+
+## Key Learnings
+
+High TPS systems expose assumptions that low-traffic systems never surface. Blocking I/O patterns that work fine under normal load become bottlenecks at scale — moving to a reactive model with Spring WebFlux required rethinking how data flows through the application, not just swapping a library.
+
+Working on a system of this criticality was valuable early-career experience. The bar for correctness in telecom infrastructure is higher than most application development contexts — message delivery failures have direct consequences for end users, and the systems have to be debuggable under pressure.
+
+## Tradeoffs
+
+Reactive programming improves throughput but adds cognitive overhead. Debugging asynchronous, non-blocking code is harder than debugging synchronous code, particularly when tracing a message through multiple processing stages. The operational tooling (logging, tracing, the admin panel) had to be built with this in mind — operators needed enough visibility to diagnose issues without needing to understand the reactive internals.

@@ -1,0 +1,33 @@
+---
+title: "Dynamic UI Framework — Enterprise HR/Payroll Modernization"
+date: "2024-06-01"
+stack: ["React", "TypeScript", ".NET Core", "Scriban", "Azure"]
+summary: "Contributed to a template-driven modernization initiative for an enterprise HR/Payroll platform for a US-based Fortune 500 client — delivering under pressure in phase one and owning the delivery plan end-to-end in the ACA compliance phase."
+status: complete
+role: "Senior Engineer"
+draft: false
+---
+
+## Context
+
+An enterprise HR/Payroll platform for a US-based Fortune 500 client had been mid-way through a modernization effort — replacing hardcoded legacy pages with a template-driven architecture using JSON configuration processed by a .NET backend with Scriban to dynamically generate React components. I joined the engagement as a Senior Engineer at a critical delivery phase, with a tight extended deadline already in place.
+
+## Phase One — Delivery Under Pressure
+
+The first phase had an inherited timeline. The team was under significant pressure, and the goal was clear: stabilise delivery and ship the release. That meant working intensively alongside the team, understanding an existing architecture quickly, and contributing to keep things moving without introducing new risk. We got it done, but the experience made clear what happens when a team is handed a deadline rather than allowed to build one.
+
+## Phase Two — ACA Compliance
+
+The second phase was a different story. ACA (Affordable Care Act) compliance pages introduced regulatory requirements that were precise and unforgiving — errors in compliance tooling carry real consequences. This time, having seen the cost of an inherited timeline, we set expectations upfront. The whole team pitched in on the delivery plan — scoping what was feasible, flagging risks early, and committing to a timeline we all believed in. We delivered exactly to it.
+
+My specific contributions included RBAC implementation within the template system — enabling granular permission management at the configuration level rather than hardcoded in React components — and complex form validation logic for compliance workflows.
+
+## Key Learnings
+
+Designing a general-purpose template schema is harder than it looks. The schema has to be expressive enough to cover real-world page complexity (conditional visibility, field dependencies, nested validations) while remaining simple enough for non-engineers to reason about when configuring pages.
+
+The contrast between the two phases was the real lesson. Phase one showed what happens when a team inherits a timeline without owning it. Phase two showed what is possible when the team sets the plan from the start and holds to it.
+
+## Tradeoffs
+
+Moving from explicit React components to a dynamic rendering engine makes debugging harder. When something renders incorrectly, the root cause could be in the template JSON, the Scriban processing layer, or the React renderer — and tracing through all three levels takes more time than debugging a standard component. The operational tooling we invested in (a template preview environment and structured logging) reduced that overhead, but it remains a real cost of the approach.

@@ -1,0 +1,31 @@
+---
+title: "GitLab Advanced SAST (GLAS)"
+date: "2024-06-01"
+stack: ["Semgrep", "Java", "JavaScript", "Go", "GitLab CI"]
+summary: "Staff-augmented engagement working alongside GitLab's global engineering team to enhance detection coverage in GitLab Advanced SAST — a static analysis security testing tool used across enterprise codebases."
+status: complete
+role: "Senior Engineer"
+draft: false
+---
+
+## Problem
+
+GitLab Advanced SAST (GLAS) needed to expand its detection capabilities across multiple language platforms. The existing coverage for Java, JavaScript, and Go had gaps that security researchers had identified, and the work required both engineering effort and close coordination with security domain experts distributed across time zones.
+
+## Approach
+
+As a Senior Engineer, I led a team of 4 developers in a staff-augmented engagement working alongside GitLab's global engineering teams. The core work was writing Semgrep rules to expand GLAS's detection coverage — specifically targeting taint flow propagation across Java, JavaScript, and Go codebases. Taint analysis tracks how untrusted data moves through a program: where it enters (sources), how it flows through transformations (propagators), and where it could cause harm if it reaches a sensitive operation (sinks). Writing effective rules meant understanding each language's idioms and the specific vulnerability patterns security researchers had identified.
+
+## Tech Stack
+
+Semgrep for rule authoring and taint flow analysis. Java, JavaScript, and Go as the target analysis languages. GitLab's CI pipeline infrastructure for testing and validation at scale.
+
+## Key Learnings
+
+Working embedded in a global team with its own culture, processes, and standards is different from being the team. You have to earn trust quickly, adapt to workflows you did not design, and contribute at a high level from day one. The security domain itself was new territory — understanding how Semgrep models taint flow (sources, propagators, sinks) and how to write rules that accurately capture vulnerability patterns without over-matching required a different mental model than application development.
+
+Cross-timezone collaboration across multiple teams of security researchers and engineers also pushed me to be more precise in written communication. When you cannot rely on a quick call to resolve ambiguity, the quality of your async writing matters.
+
+## Tradeoffs
+
+Detection coverage and false positive rate are in constant tension in static analysis. A rule broad enough to catch all variants of a vulnerability will also flag legitimate code patterns. Narrowing the rule reduces noise but may miss edge cases. Every detection rule involved a judgment call about where to draw that line, made in collaboration with security researchers who understood the threat landscape.

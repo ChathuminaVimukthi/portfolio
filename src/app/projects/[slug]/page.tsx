@@ -45,6 +45,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${className}`}>
               {label}
             </span>
+            {meta.role && <span className="text-sm text-secondary">{meta.role}</span>}
+            {meta.role && <span className="text-secondary">·</span>}
             <span className="text-sm text-secondary">{formatDate(meta.date)}</span>
           </div>
           <h1 className="text-3xl font-semibold text-primary leading-tight">{meta.title}</h1>
